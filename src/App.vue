@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!--   msg="动态的向子组件传值" -->
+    <HelloWorld msg="Welcome to Your 跳蚤"/>
   </div>
 </template>
 
