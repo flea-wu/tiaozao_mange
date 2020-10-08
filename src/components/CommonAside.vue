@@ -46,7 +46,7 @@ export default {
     },
     isCollapse() {
       // 这里的数据就是从vuex取得
-      return this.$store.state.tab.isCollapse;
+      return this.$store.state.isCollapse;
     },
   },
   data() {
