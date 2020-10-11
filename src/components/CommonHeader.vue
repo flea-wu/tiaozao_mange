@@ -54,7 +54,7 @@ export default {
         .user {
             width: 40px;
             height: 40px;
-            border-radius: 50%;
+            border-radius: 0%;
         }
     }
 </style>

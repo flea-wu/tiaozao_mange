@@ -9,8 +9,8 @@
             active-text-color="#ffd04b"
     >
         <!--是否水平折叠收起菜单 会影响这里字段的显示 -->
-        <h3 v-show="isCollapse">偶囧</h3>
-        <h3 v-show="!isCollapse">偶囧后台管理系统</h3>
+        <h3 v-show="isCollapse">跳蚤</h3>
+        <h3 v-show="!isCollapse">跳蚤后台管理系统</h3>
         <el-menu-item :index="item.path" v-for="item in noChildren" :key="item.path"
                       @click="clickMenu(item)">
             <i :class="'el-icon-' + item.icon"/>
@@ -99,6 +99,7 @@ export default {
   methods: {
     // 跳转路由 根据名称跳转
     clickMenu(item) {
+      console.log(item);
       this.$router.push({ name: item.name });
     },
   },
@@ -110,13 +111,13 @@ export default {
         height: 100%;
         border: none;
         h3 {
-            color: #ffffff;
+            color: #ffd336;
             text-align: center;
             line-height: 48px;
         }
     }
     .el-menu-vertical-demo:not(.el-menu--collapse) {
         width: 200px;
-        min-height: 400px;
+        min-height: 800px;
     }
 </style>

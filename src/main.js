@@ -13,6 +13,8 @@ import http from './api/config'; // axios
 // eslint-disable-next-line import/order
 import ElementUI from 'element-ui';
 
+import './style/main.css';
+
 Vue.use(ElementUI);
 Vue.prototype.$http = http;
 
