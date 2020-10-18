@@ -20,6 +20,7 @@
 export default {
   data() {
     return {
+      // eslint-disable-next-line global-require
       userImg: require('../assets/logo.png'),
     };
   },
