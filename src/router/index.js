@@ -8,7 +8,7 @@ export default new VueRouter({
   routes: [
     {
       path: '/',
-      component: () => import('@/views/Main'),
+      component: () => import('../views/Main'),
       // children: [
       //   {
       //     path: '/',

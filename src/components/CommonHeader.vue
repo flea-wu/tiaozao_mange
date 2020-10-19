@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       // eslint-disable-next-line global-require
-      userImg: require('../assets/logo.png'),
+      userImg: 'https://img.nbjike.com/jietu/%E7%94%B5%E8%84%91.png',
     };
   },
   methods: {
