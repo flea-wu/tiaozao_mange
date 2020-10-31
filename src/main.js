@@ -1,17 +1,19 @@
 import Vue from 'vue';
+// 第三方包
+import ElementUI from 'element-ui';
 import App from './App.vue';
-import router from './router'; // 引入 vue-router
-import store from './store'; // 引入 vuex
+// 引入 vue-router
+import router from './router/router';
+// 引入 vuex
+import store from './store';
 
 // 全局配置
 // import '@/assets/scss/reset.scss'; // 全局样式
-import 'element-ui/lib/theme-chalk/index.css'; // element-ui样式
-import http from './api/config'; // axios
-// import './mock'; // mockjs
+// element-ui样式
+import 'element-ui/lib/theme-chalk/index.css';
 
-// 第三方包
-// eslint-disable-next-line import/order
-import ElementUI from 'element-ui';
+import http from './api/axios'; // axios
+// import './mock'; // mockjs
 
 import './style/main.css';
 

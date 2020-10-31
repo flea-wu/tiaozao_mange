@@ -19,13 +19,14 @@ module.exports = {
   },
   devServer: {
     host: 'localhost',
-    port: '7890',
+    port: '8081',
     hot: true,
     open: false,
     overlay: {
       warning: false,
       error: true,
     },
+    // 配置代理，跨域的时候处理
     // proxy: {
     //   [process.env.VUE_APP_BASE_API]: {
     //     target: process.env.VUE_APP_BASE_API,

@@ -1,11 +1,14 @@
 <template>
-    <div>123111</div>
+    <div>孩子</div>
 </template>
 
 <script>
-
 export default {
-  components: {
+  props: {
   },
 };
 </script>
+
+<style scoped>
+
+</style>
