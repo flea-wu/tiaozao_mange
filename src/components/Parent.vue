@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="pbox">父母</div>
-        <Child></Child>
+        <Child :pmsg="1111"></Child>
     </div>
 </template>
 
