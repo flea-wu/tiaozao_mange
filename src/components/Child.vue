@@ -1,9 +1,10 @@
 <template>
-    <div>
+    <div class="box">
         <div>孩子</div>
         <div>
             {{ pmsg }}
         </div>
+        <button @click="passMsg">走你</button>
     </div>
 </template>
 
@@ -16,9 +17,23 @@ export default {
       type: String,
     },
   },
+  methods: {
+    passMsg() {
+      // 子组件向父组件触发一个事件
+      console.log('passMsg 事件触发');
+      this.$emit('showMsg', 'i am from Child');
+    },
+  },
+  mounted() {
+    console.log(this.$parent);
+    console.log(this.$children);
+  },
 };
 </script>
 
 <style scoped>
+    .box {
+        border:2px solid #1d00ff
+    }
 
 </style>
