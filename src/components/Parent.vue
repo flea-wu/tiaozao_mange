@@ -12,20 +12,24 @@
                 年龄：{{user.age}}
             </div>
         </div>
+        <Daughter :pmsg="pmsg" @daughterMsg="daughterMsg"></Daughter>
+        <div> {{ daughterMsgVal }}</div>
     </div>
 </template>
 
 <script>
 import Child from '@/components/Child.vue';
 import Son from '@/components/Son.vue';
+import Daughter from '@/components/Daughter.vue';
 
 export default {
-  components: { Child, Son },
+  components: { Child, Son, Daughter },
   data() {
     return {
       msg: '',
       pmsg: '我是父组件中的数据',
       user: '',
+      daughterMsgVal: '',
     };
   },
   methods: {
@@ -36,6 +40,9 @@ export default {
     childEvent(val) {
       this.user = val;
     },
+    daughterMsg(val) {
+      this.daughterMsgVal = val;
+    },
   },
 };
 </script>
@@ -43,7 +50,7 @@ export default {
 <style scoped>
     .pbox {
         background-color: aquamarine;
-        height: 200px;
+        height: 100px;
     }
     .box {
         border:2px solid #3d8635
