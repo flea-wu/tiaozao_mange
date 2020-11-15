@@ -14,6 +14,10 @@
         </div>
         <Daughter :pmsg="pmsg" @daughterMsg="daughterMsg"></Daughter>
         <div> {{ daughterMsgVal }}</div>
+        <Son1 :son1="son1" @sendSon1Msg="sendSon1Msg"></Son1>
+        <div v-show="Object.keys(son1Val).length !== 0">
+            {{ son1Val }}
+        </div>
     </div>
 </template>
 
@@ -21,15 +25,22 @@
 import Child from '@/components/Child.vue';
 import Son from '@/components/Son.vue';
 import Daughter from '@/components/Daughter.vue';
+import Son1 from '@/components/Son1.vue';
 
 export default {
-  components: { Child, Son, Daughter },
+  components: {
+    Child, Son, Daughter, Son1,
+  },
   data() {
     return {
       msg: '',
       pmsg: '我是父组件中的数据',
       user: '',
       daughterMsgVal: '',
+      son1: {
+        name: 'tiaozao',
+      },
+      son1Val: {},
     };
   },
   methods: {
@@ -42,6 +53,9 @@ export default {
     },
     daughterMsg(val) {
       this.daughterMsgVal = val;
+    },
+    sendSon1Msg(val) {
+      this.son1Val = val;
     },
   },
 };
