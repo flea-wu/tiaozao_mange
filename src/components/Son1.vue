@@ -6,6 +6,7 @@
         <div @click="sendSon1Msg">
             {{ son1 }}
         </div>
+        {{ fpmsg }}
     </div>
 </template>
 
@@ -18,11 +19,19 @@ export default {
       require: true,
     },
   },
+  data() {
+    return {
+      fpmsg: '',
+    };
+  },
   methods: {
     sendSon1Msg() {
       console.log('触发了，sendSon1Msg 事件');
       this.$emit('sendSon1Msg', this.son1);
     },
+  },
+  mounted() {
+    this.fpmsg = this.$parent.$data.pmsg;
   },
 };
 </script>
