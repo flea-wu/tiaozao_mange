@@ -2,11 +2,14 @@
     <div>
         <div class="box">我是儿子
             <div @click="childEvent"> {{ fp }}</div>
+            {{brothermsg}}
         </div>
     </div>
 </template>
 
 <script>
+import bus from '@/bus/bus';
+
 export default {
   name: '',
   props: {
@@ -14,6 +17,17 @@ export default {
       type: String,
       default: '',
     },
+  },
+  data() {
+    return {
+      brothermsg: '',
+    };
+  },
+  mounted() {
+    bus.$on('sendBrotherMsg', (data) => {
+      console.log('$on', data);
+      this.brothermsg = data;
+    });
   },
   methods: {
     childEvent() {

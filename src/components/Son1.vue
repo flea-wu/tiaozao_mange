@@ -7,10 +7,13 @@
             {{ son1 }}
         </div>
         {{ fpmsg }}
+        <button @click="sendBrother">sendBrother</button>
     </div>
 </template>
 
 <script>
+import bus from '@/bus/bus';
+
 export default {
   name: 'Son1',
   props: {
@@ -28,6 +31,10 @@ export default {
     sendSon1Msg() {
       console.log('触发了，sendSon1Msg 事件');
       this.$emit('sendSon1Msg', this.son1);
+    },
+    sendBrother() {
+      console.log('触发了，sendBrotherMsg 事件');
+      bus.$emit('sendBrotherMsg', this.fpmsg);
     },
   },
   mounted() {
