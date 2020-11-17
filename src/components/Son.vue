@@ -4,6 +4,8 @@
             <div @click="childEvent"> {{ fp }}</div>
             {{brothermsg}}
         </div>
+        <router-link to="/parent">parent</router-link>
+        <el-button @click="toSon1">去兄弟son1</el-button>
     </div>
 </template>
 
@@ -33,6 +35,9 @@ export default {
     childEvent() {
       console.log('触发了 childEvent');
       this.$emit('childEvent', { name: '张三', age: 19 });
+    },
+    toSon1() {
+      this.$router.push({ path: '/son1' });
     },
   },
 };

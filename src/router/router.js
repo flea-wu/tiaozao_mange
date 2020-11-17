@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-// 完整路由代码
+// 完整路由代码;
 export default new VueRouter({
   mode: 'history',
   routes: [
@@ -20,6 +20,14 @@ export default new VueRouter({
     {
       path: '/child',
       component: () => import('../components/Child'),
+    },
+    {
+      path: '/son',
+      component: () => import('../components/Son'),
+    },
+    {
+      path: '/son1',
+      component: () => import('../components/Son1'),
     },
   ],
 });

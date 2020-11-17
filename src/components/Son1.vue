@@ -8,6 +8,7 @@
         </div>
         {{ fpmsg }}
         <button @click="sendBrother">sendBrother</button>
+        <el-button @click="toSon">去兄弟son</el-button>
     </div>
 </template>
 
@@ -35,6 +36,9 @@ export default {
     sendBrother() {
       console.log('触发了，sendBrotherMsg 事件');
       bus.$emit('sendBrotherMsg', this.fpmsg);
+    },
+    toSon() {
+      this.$router.push({ path: '/son' });
     },
   },
   mounted() {

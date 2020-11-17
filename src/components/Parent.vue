@@ -18,6 +18,7 @@
         <div v-show="Object.keys(son1Val).length !== 0">
             {{ son1Val }}
         </div>
+        <el-button @click="backSon">去儿子那</el-button>
     </div>
 </template>
 
@@ -56,6 +57,9 @@ export default {
     },
     sendSon1Msg(val) {
       this.son1Val = val;
+    },
+    backSon() {
+      this.$router.push({ path: '/son' });
     },
   },
 };
