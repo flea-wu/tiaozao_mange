@@ -37,7 +37,9 @@ export default {
       this.$emit('childEvent', { name: '张三', age: 19 });
     },
     toSon1() {
-      this.$router.push({ path: '/son1' });
+      // 可以使用无参数：http://localhost:8081/son1/123 非xxx=123；id 必须要和路由配置里面的 :id 设置
+      this.$router.push({ name: 'son1', params: { id: 123 } }); // name 和 params
+      // this.$router.push({ path: '/son1', query: { id: 123 } }); // path 和 query
     },
   },
 };
