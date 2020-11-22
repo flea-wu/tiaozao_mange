@@ -18,13 +18,14 @@ import http from './api/axios'; // axios
 import './style/main.css';
 
 router.beforeEach((to, from, next) => {
-  console.log('to', to.path);
-  console.log('from', from.path);
-  if (to.path === '/') {
-    next();
-  } else {
-    router.push({ path: '/' });
-  }
+  // console.log('to', to.path);
+  // console.log('from', from.path);
+  // if (to.path === '/') {
+  //   next();
+  // } else {
+  //   router.push({ path: '/' });
+  // }
+  next();
 });
 
 Vue.use(ElementUI);
