@@ -8,7 +8,6 @@
 </template>
 
 <script>
-// import Footer from '@/components/layout/Footer.vue';
 import Header from '@/components/layout/header/Header.vue';
 import Side from '@/components/layout/sidebar/Side.vue';
 import PageMain from '@/components/layout/content/PageMain.vue';

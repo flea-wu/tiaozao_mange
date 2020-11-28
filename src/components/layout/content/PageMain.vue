@@ -1,6 +1,7 @@
 <template>
     <div class="box">
         <div>内容显示区域</div>
+        <router-view></router-view>
     </div>
 </template>
 

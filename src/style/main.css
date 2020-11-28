@@ -1,6 +1,5 @@
 /*全局样式*/
 html,body {
     margin: 0;
-    height:100%;
-    overflow:hidden;
+    padding: 0;
 }
